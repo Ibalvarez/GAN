@@ -8,7 +8,7 @@
 
  An example of the obtained results:  
  
- ![Epoch_3950](https://github.com/user-attachments/assets/6017a6a0-c957-4edd-9a6c-aad79f39626b)
+ ![exampleImage](https://github.com/user-attachments/assets/6017a6a0-c957-4edd-9a6c-aad79f39626b)
 
 
  
