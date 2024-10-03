@@ -208,8 +208,7 @@ def train(path, batch_size=16, EPOCHS=2000, epochs_between_saves = 20, epochs_be
             discriminator.trainable = False #Important to set the weight to False
             generator_loss = discriminator_on_generator.train_on_batch(Noise_batch, labels_generator)
 
-            print ("Initial batch losses : ", "Generator loss", generator_loss, "Discriminator loss", discriminator_loss, "Total:", generator_loss + discriminator_loss) #TODO calculate KullBackLeiber
-
+            print ("Initial batch losses : ", "Generator loss", generator_loss, "Discriminator loss", discriminator_loss, "Total:", generator_loss + discriminator_loss)
             if epoch % epochs_between_saves == 0 and epoch != 0:
                 print ('Saving weights..')
                 generator.save('models/generator_' + str(epoch) + '.h5', True)
