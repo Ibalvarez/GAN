@@ -205,7 +205,7 @@ def train(path, batch_size=16, EPOCHS=2000, epochs_between_saves = 20, epochs_be
 
             # Step 2: Generate random noise and use it to create train only the generator, we do this by freezing the discriminator weights and "lying" to the discriminator by telling it that the samples are real
             labels_generator = np.array([1] * len(image_batch))
-            discriminator.trainable = False #Important to set the weight to False
+            discriminator.trainable = False #Important to set the trainable of the discriminator to False so only forward propagations is applied to it and no learning process happens on this step
             generator_loss = discriminator_on_generator.train_on_batch(Noise_batch, labels_generator)
 
             print ("Initial batch losses : ", "Generator loss", generator_loss, "Discriminator loss", discriminator_loss, "Total:", generator_loss + discriminator_loss)
